@@ -19,7 +19,7 @@ Ao receber um evento, o parceiro deve esperar um payload JSON com os seguintes c
     "dateTime": 1705338959 // Data e hora do evendo no formato epoch.
   }
 }
-/```json
+```
 
 ## Descrição dos Campos
 
