@@ -5,8 +5,8 @@
 A API funciona como um webhook para enviar eventos relacionados a chamadas. Abaixo estão os detalhes sobre os dados que serão enviados ao parceiro.
 
 ### 1. Requisitos do Webhook
-  - Método HTTP: POST
-  - Cabeçalho Obrigatório: authTokenTellicon (contendo o token de autenticação)
+- Método HTTP: POST
+- Cabeçalho Obrigatório: authTokenTellicon (contendo o token de autenticação)
 
 ### 1. Formato dos Dados Recebidos
 
