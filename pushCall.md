@@ -2,7 +2,7 @@
 
 ## Endpoint: `http(s)://<hostDoParceiro>/eventTellicon`
 
-A API funciona como um webhook para enviar eventos relacionados a chamadas. Abaixo estão os detalhes sobre os dados que serão enviados ao parceiro.
+A API funciona como um webhook para enviar eventos. Abaixo estão os detalhes sobre os dados que serão enviados ao parceiro.
 
 ### 1. Requisitos do parceiro
 - Método HTTP: POST
