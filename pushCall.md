@@ -19,3 +19,12 @@ Ao receber um evento, o parceiro deve esperar um payload JSON com os seguintes c
     "dateTime": 1705338959 // Data e hora do evendo no formato epoch.
   }
 }
+
+## Descrição dos Campos
+
+- **type** (string): Define o tipo de evento relacionado à chamada. Valor aceitável: "pushCall" para eventos de chamada.
+- **src** (string): Identifica a origem da chamada.
+- **client** (integer): Identificador único do cliente relacionado à chamada.
+- **building** (integer): Identificador único do prédio onde a chamada ocorreu.
+- **apt** (integer): Número do apartamento relacionado à chamada.
+- **dateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
