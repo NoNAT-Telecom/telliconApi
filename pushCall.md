@@ -41,3 +41,14 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
 - **building** (integer): Bloco ou quadra onde a chamada foi direcionada.
 - **apt** (integer): Número do apartamento, lote ou sala onde a chamada foi direcionada.
 - **dateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
+
+#### 3.1.3. Resposta do parceiro
+O parceiro deve retornar uma resposta HTTP adequada para indicar o status da recepção do evento. Algumas sugestões de códigos de resposta:
+
+- 200 OK: A solicitação foi recebida com sucesso.
+- 400 Bad Request: A solicitação contém dados inválidos ou está ausente.
+- 401 Unauthorized: O cabeçalho authTokenTellicon está ausente ou inválido.
+- 500 Internal Server Error: O servidor encontrou um erro inesperado durante o processamento.
+
+#### 3.1.4. Observações
+Ao receber essa notificação, o parceiro deve processar os dados conforme necessário.
