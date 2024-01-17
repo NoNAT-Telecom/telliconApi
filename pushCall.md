@@ -4,6 +4,10 @@
 
 A API funciona como um webhook para enviar eventos relacionados a chamadas. Abaixo estão os detalhes sobre os dados que serão enviados ao parceiro.
 
+### 1. Requisitos do Webhook
+  Método HTTP: POST
+  Cabeçalho Obrigatório: authTokenTellicon (contendo o token de autenticação)
+
 ### 1. Formato dos Dados Recebidos
 
 Ao receber um evento, o parceiro deve esperar um payload JSON com os seguintes campos:
@@ -29,3 +33,7 @@ Ao receber um evento, o parceiro deve esperar um payload JSON com os seguintes c
 - **building** (integer): Identificador único do prédio onde a chamada ocorreu.
 - **apt** (integer): Número do apartamento relacionado à chamada.
 - **dateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
+
+3. Requisitos do Webhook
+Método HTTP: POST
+Cabeçalho Obrigatório: authTokenTellicon (contendo o token de autenticação)
