@@ -1,4 +1,4 @@
-#### Manual - Eventos que são enviados para o parceiro
+# Manual - Eventos que são enviados para o parceiro
 
 ### 1. Requisitos do parceiro
 - Método HTTP: POST
@@ -18,7 +18,7 @@ A API funciona como um webhook para enviar eventos. Abaixo estão os detalhes so
 ## 3.1. Notificação de Chamada
 Quando uma chamada é realizada pelo interfone externo, a API envia um evento de notificação para o parceiro. Abaixo estão os detalhes sobre os dados que serão incluídos nessa notificação.
 
-# 3.1.1. Formato dos Dados
+#### 3.1.1. Formato dos Dados
 Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os seguintes campos:
 
 ```json
@@ -34,7 +34,7 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
 }
 ```
 
-# 3.1.2. Descrição dos Campos
+#### 3.1.2. Descrição dos Campos
 - **type** (string): Define o tipo de evento relacionado à chamada. O valor aceitável é "pushCall" para notificações de chamada.
 - **src** (string): Identifica a origem da chamada.
 - **client** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) onde a chamada foi direcionada.
