@@ -29,7 +29,7 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
     "client": 505,
     "building": 121,
     "apt": 1001,
-    "dateTime": 1705338959
+    "eventDateTime": 1705338959
   }
 }
 ```
@@ -40,7 +40,7 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
 - **client** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) onde a chamada foi direcionada.
 - **building** (integer): Bloco ou quadra onde a chamada foi direcionada.
 - **apt** (integer): Número do apartamento, lote ou sala onde a chamada foi direcionada.
-- **dateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
+- **eventDateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
 
 #### 3.1.3. Resposta do parceiro
 O parceiro deve retornar uma resposta HTTP adequada para indicar o status da recepção do evento. Algumas sugestões de códigos de resposta:
