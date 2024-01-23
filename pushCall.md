@@ -103,7 +103,7 @@ Ao receber essa notificação, o parceiro deve processar os dados conforme neces
 
 ## 3.3. Comando DTMF
 
-Quando um comando de DTMF (Dual-tone Multi-frequency) é detectado durante uma chamada, a API envia um evende de controle de acesso para o parceiro. Abaixo estão os detalhes sobre os dados que serão incluídos nesse evento.
+Quando um comando de DTMF (Dual-tone Multi-frequency) é detectado durante uma chamada, a API envia um evento de controle de acesso para o parceiro. Abaixo estão os detalhes sobre os dados que serão incluídos nesse evento.
 
 ### 3.3.1. Formato dos Dados
 
