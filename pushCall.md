@@ -107,7 +107,7 @@ Quando um comando de DTMF (Dual-tone Multi-frequency) é detectado durante uma c
 
 ### 3.3.1. Formato dos Dados
 
-Ao enviar esse evento de DTMF, a API incluirá um payload JSON com os seguintes campos:
+Ao enviar esse evento de comando de DTMF, a API incluirá um payload JSON com os seguintes campos:
 
 ```json
 {
