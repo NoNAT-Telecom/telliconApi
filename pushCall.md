@@ -72,7 +72,7 @@ Ao enviar uma notificação de registro de atendimento, a API incluirá um paylo
     "apt": 1001,
     "eventDateTime": 1705338959,
     "answerDateTime": 1705338959,
-    "hangupDateTime":1705338969,
+    "hangupDateTime": 1705338969,
     "callDurationTime": 10
   }
 }
