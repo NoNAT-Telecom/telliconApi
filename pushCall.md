@@ -81,7 +81,7 @@ Ao enviar uma notificação de registro de atendimento, a API incluirá um paylo
 ### 3.2.2. Descrição dos Campos
 - **type** (string): Define o tipo de evento relacionado à resposta de chamada. O valor aceitável é "answerCall" para notificações desse tipo.
 - **src** (string): Identifica a origem da chamada.
-- **dst** (string): Número discado na chamada.
+- **dst** (string): Número de quem fez o atendimento da chamada.
 - **client** (integer): Código do cliente (Condomínio vertical, horizontal, empresarial e/ou empresas) associado à chamada.
 - **building** (integer): Bloco ou quadra associado à chamada.
 - **apt** (integer): Número do apartamento, lote ou sala associado à chamada.
