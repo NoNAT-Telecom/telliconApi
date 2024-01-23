@@ -16,7 +16,7 @@
 A API funciona como um webhook para enviar eventos. Abaixo estão os detalhes sobre os dados que serão enviados ao parceiro.
 
 ## 3.1. Notificação de Chamada
-Quando uma chamada é realizada pelo interfone externo, a API envia um evento de notificação para o parceiro. Abaixo estão os detalhes sobre os dados que serão incluídos nessa notificação.
+Quando uma chamada é realizada pelo interfone externo, a API envia um evento de notificação para o parceiro. Abaixo estão os detalhes sobre os dados que serão incluídos nesse evento.
 
 #### 3.1.1. Formato dos Dados
 Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os seguintes campos:
