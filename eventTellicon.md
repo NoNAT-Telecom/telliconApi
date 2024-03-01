@@ -26,10 +26,11 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
 {
   "eventTellicon": {
     "type": "pushCall",
-    "src": "9001",
-    "client": 505,
-    "building": 121,
-    "apt": 1001,
+    "src": "12233334444440",
+    "company": 3333, 
+    "client": 444444,
+    "building": 555,
+    "apt": 6666,
     "eventDateTime": 1705338959
   }
 }
@@ -38,6 +39,7 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
 ### 4.1.2. Descrição dos Campos
 - **type** (string): Define o tipo de evento relacionado à chamada. O valor aceitável é "pushCall" para notificações de chamada.
 - **src** (string): Identifica a origem da chamada.
+- **company** (integer): Codigo da empresa cadastrada.
 - **client** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) onde a chamada foi direcionada.
 - **building** (integer): Bloco ou quadra onde a chamada foi direcionada.
 - **apt** (integer): Número do apartamento, lote ou sala onde a chamada foi direcionada.
@@ -66,11 +68,12 @@ Ao enviar esse evento de registro de atendimento, a API incluirá um payload JSO
 {
   "eventTellicon": {
     "type": "answerCall",
-    "src": "9001",
+    "src": "12233334444440",
     "dst": "018988776655",
-    "client": 505,
-    "building": 121,
-    "apt": 1001,
+    "company": 3333, 
+    "client": 444444,
+    "building": 555,
+    "apt": 6666,
     "eventDateTime": 1705338959,
     "answerDateTime": 1705338959,
     "hangupDateTime": 1705338969,
@@ -83,6 +86,7 @@ Ao enviar esse evento de registro de atendimento, a API incluirá um payload JSO
 - **type** (string): Define o tipo de evento relacionado à resposta de chamada. O valor aceitável é "answerCall" para notificações desse tipo.
 - **src** (string): Identifica a origem da chamada.
 - **dst** (string): Número de quem fez o atendimento da chamada.
+- **company** (integer): Codigo da empresa cadastrada.
 - **client** (integer): Código do cliente (Condomínio vertical, horizontal, empresarial e/ou empresas) associado à chamada.
 - **building** (integer): Bloco ou quadra associado à chamada.
 - **apt** (integer): Número do apartamento, lote ou sala associado à chamada.
@@ -115,10 +119,11 @@ Ao enviar esse evento de comando de DTMF, a API incluirá um payload JSON com os
   "eventTellicon": {
     "type": "dtmfCommand",
     "src": "018988776655",
-    "dst": "9001",
-    "client": 505,
-    "building": 121,
-    "apt": 1001,
+    "dst": "12233334444440",
+    "company": 3333, 
+    "client": 444444,
+    "building": 555,
+    "apt": 6666,
     "dtmfCommand": "*2",
     "eventDateTime": 1705338965
   }
@@ -128,6 +133,7 @@ Ao enviar esse evento de comando de DTMF, a API incluirá um payload JSON com os
 - **type** (string): Define o tipo de evento relacionado ao comando DTMF. O valor aceitável é "dtmfCommand" para notificações desse tipo.
 - **src** (string): Origem do comando DTMF.
 - **dst** (string): Destino do comando DTMF.
+- **company** (integer): Codigo da empresa cadastrada.
 - **client** (integer): Código do cliente (Condomínio vertical, horizontal, empresarial e/ou empresas) associado à chamada.
 - **building** (integer): Bloco ou quadra associado à chamada.
 - **apt** (integer): Número do apartamento, lote ou sala associado à chamada.
