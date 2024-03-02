@@ -16,15 +16,13 @@ O parceiro deve enviar os dados da seguinte forma:
 
 ```json
 {
-  "cmdTellicon": [
-    {
-      "type": "addExten",
-      "patner": 22,
-			"company": 3333,
-			"client": 444444,
-			"exten": 1
-    }
-  ]
+  "cmdTellicon": [{
+    "type": "addExten",
+    "patner": 22,
+    "company": 3333,
+    "client": 444444,
+    "exten": 1
+  }]
 }
 ```
 ### 4.1.2. Descrição dos Campos
