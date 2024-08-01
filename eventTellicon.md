@@ -25,25 +25,27 @@ Ao enviar uma notificação de chamada, a API incluirá um payload JSON com os s
 ```json
 {
   "eventTellicon": {
-    "type": "pushCall",
-    "src": "12233334444440",
-    "company": 3333, 
-    "client": 444444,
-    "building": 555,
-    "apt": 6666,
-    "eventDateTime": 1705338959
+    "tipo": "pushCall",
+    "parceiro": 11,
+    "contrato": 2222, 
+    "licenca": 333333,
+    "bloco": 555,
+    "unidade": 6666,
+    "ramal": "77988888888",
+    "dataHoraEvento": 1705338959
   }
 }
 ```
 
 ### 4.1.2. Descrição dos Campos
-- **type** (string): Define o tipo de evento relacionado à chamada. O valor aceitável é "pushCall" para notificações de chamada.
-- **src** (string): Identifica a origem da chamada.
-- **company** (integer): Codigo da empresa cadastrada.
-- **client** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) onde a chamada foi direcionada.
-- **building** (integer): Bloco ou quadra onde a chamada foi direcionada.
-- **apt** (integer): Número do apartamento, lote ou sala onde a chamada foi direcionada.
-- **eventDateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
+- **tipo** (string): Define o tipo de evento relacionado à chamada. O valor aceitável é "pushCall" para notificações de chamada.
+- **parceiro** (interger): Identifica o parceiro na base de dados.
+- **contrato** (integer): Codigo da empresa cadastrada.
+- **licenca** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) onde a chamada foi direcionada.
+- **bloco** (integer): Bloco ou quadra onde a chamada foi direcionada.
+- **unidade** (integer): Número do apartamento, lote ou sala onde a chamada foi direcionada.
+- **ramal** (string): Identifica o ramal de origem da chamada.
+- **dataHoraEvento** (integer): Representa a data e a hora do evento em formato Unix timestamp.
 
 ### 4.1.3. Resposta do parceiro
 O parceiro deve retornar uma resposta HTTP adequada para indicar o status da recepção do evento. Algumas sugestões de códigos de resposta:
@@ -67,33 +69,37 @@ Ao enviar esse evento de registro de atendimento, a API incluirá um payload JSO
 ```json
 {
   "eventTellicon": {
-    "type": "answerCall",
-    "src": "12233334444440",
-    "dst": "018988776655",
-    "company": 3333, 
-    "client": 444444,
-    "building": 555,
-    "apt": 6666,
-    "eventDateTime": 1705338959,
-    "answerDateTime": 1705338959,
-    "hangupDateTime": 1705338969,
-    "callDurationTime": 10
+    "tipo": "answerCall",
+    "parceiro": 11,
+    "contrato": 2222, 
+    "licenca": 333333,
+    "bloco": 555,
+    "unidade": 6666,
+    "ramal": "77988888888",
+    "telefone": "77988888888",
+    "dataHoraEvento": 1705338900,
+    "dataHoraAtendido": 1705338910,
+    "dataHoraEncerrado": 17053389625,
+    "tempoEspera": 10,
+    "tempoConversa": 15
   }
 }
 ```
 
 ### 4.2.2. Descrição dos Campos
-- **type** (string): Define o tipo de evento relacionado à resposta de chamada. O valor aceitável é "answerCall" para notificações desse tipo.
-- **src** (string): Identifica a origem da chamada.
-- **dst** (string): Número de quem fez o atendimento da chamada.
-- **company** (integer): Codigo da empresa cadastrada.
-- **client** (integer): Código do cliente (Condomínio vertical, horizontal, empresarial e/ou empresas) associado à chamada.
-- **building** (integer): Bloco ou quadra associado à chamada.
-- **apt** (integer): Número do apartamento, lote ou sala associado à chamada.
-- **eventDateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
-- **answerDateTime** (integer): Representa a data e a hora em que a chamada foi atendida em formato Unix timestamp.
-- **hangupDateTime** (integer): Representa a data e a hora em que a chamada foi encerrada em formato Unix timestamp.
-- **callDurationTime** (integer): Representa a duração total da chamada em segundos.
+- **tipo** (string): Define o tipo de evento relacionado à resposta de chamada. O valor aceitável é "answerCall" para notificações desse tipo.
+- **parceiro** (interger): Identifica o parceiro na base de dados.
+- **contrato** (integer): Codigo da empresa cadastrada.
+- **licenca** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) associado à chamada.
+- **bloco** (integer): Bloco ou quadra associado à chamada.
+- **unidade** (integer): Número do apartamento, lote ou sala associado à chamada.
+- **ramal** (string): Identifica o ramal de origem da chamada.
+- **telefone** (string): Número de quem fez o atendimento da chamada.
+- **dataHoraEvento** (integer): Representa a data e a hora do evento em formato Unix timestamp.
+- **dataHoraAtendido** (integer): Representa a data e a hora em que a chamada foi atendida em formato Unix timestamp.
+- **dataHoraEncerrado** (integer): Representa a data e a hora em que a chamada foi encerrada em formato Unix timestamp.
+- **tempoEspera** (integer): Representa a tempo total em espera até ser atendido.
+- **tempoConversa** (integer): Representa a duração total de conversação em segundos.
 
 ### 4.2.3. Resposta do Parceiro
 O parceiro deve retornar uma resposta HTTP adequada para indicar o status da recepção do evento. Sugestões de códigos de resposta incluem:
@@ -118,27 +124,29 @@ Ao enviar esse evento de comando de DTMF, a API incluirá um payload JSON com os
 {
   "eventTellicon": {
     "type": "dtmfCommand",
-    "src": "018988776655",
-    "dst": "12233334444440",
-    "company": 3333, 
-    "client": 444444,
-    "building": 555,
-    "apt": 6666,
-    "dtmfCommand": "*2",
-    "eventDateTime": 1705338965
+    "parceiro": 11,
+    "contrato": 2222, 
+    "licenca": 333333,
+    "bloco": 555,
+    "unidade": 6666,
+    "ramal": "77988888888",
+    "telefone": "77988888888",
+    "dtmfComando": "*2",
+    "dataHoraEvento": 1705338965
   }
 }
 ```
 ### 4.3.2. Descrição dos Campos
-- **type** (string): Define o tipo de evento relacionado ao comando DTMF. O valor aceitável é "dtmfCommand" para notificações desse tipo.
-- **src** (string): Origem do comando DTMF.
-- **dst** (string): Destino do comando DTMF.
-- **company** (integer): Codigo da empresa cadastrada.
-- **client** (integer): Código do cliente (Condomínio vertical, horizontal, empresarial e/ou empresas) associado à chamada.
-- **building** (integer): Bloco ou quadra associado à chamada.
-- **apt** (integer): Número do apartamento, lote ou sala associado à chamada.
-- **dtmfCommand** (string): Representa o comando DTMF enviado durante a chamada.
-- **eventDateTime** (integer): Representa a data e a hora do evento em formato Unix timestamp.
+- **tipo** (string): Define o tipo de evento relacionado ao comando DTMF. O valor aceitável é "dtmfCommand" para notificações desse tipo.
+- **parceiro** (interger): Identifica o parceiro na base de dados.
+- **contrato** (integer): Codigo da empresa cadastrada.
+- **licenca** (integer): Código do cliente (Condominio vertiral, horizontal, empresarial e/ou empresas) associado à chamada.
+- **bloco** (integer): Bloco ou quadra associado à chamada.
+- **unidade** (integer): Número do apartamento, lote ou sala associado à chamada.
+- **telefone** (string): Origem do comando DTMF.
+- **ramal** (string): Destino do comando DTMF.
+- **dtmfComando** (string): Representa o comando DTMF enviado durante a chamada.
+- **dataHoraEvento** (integer): Representa a data e a hora do evento em formato Unix timestamp.
 
 ### 4.2.3. Resposta do Parceiro
 O parceiro deve retornar uma resposta HTTP adequada para indicar o status da recepção do evento. Sugestões de códigos de resposta incluem:
